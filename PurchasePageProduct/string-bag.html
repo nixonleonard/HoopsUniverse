@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FOCO Team Backpack</title>
+    <link rel="icon" href="./purchase-img/lgoo.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="purchase-style.css">
+    <script src="https://kit.fontawesome.com/b65c387f87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="../Assets/Untitled-2.png" alt="">
+        </div>
+
+        <nav>
+            <ul class="topnav" id="">
+                <input class="searchbar" id="el" type="text" placeholder="search...">
+                <button class="search" id="el" type="submit"><i class="fa fa-search"></i></button>
+                <a class="navb act" id="el" href="../home.html">Home</a>
+                <a class="navb" id ="el" href="../Mens-Shoes.html">Shoes</a>
+                <a class="navb" id ="el" href="../Mens-Jersey.html">Accessoris</a>
+                <a class="navb" id ="el" href="../faqpage.html">FAQ</a>
+                <div class="dropdown2">
+                    <a class="navb" id ="act" href="../purchasepage.html">Purchase</a>
+                    <div class="dropdown-content2">
+                        <a href="../home.html">Home</a>
+                        <a href="../Mens-Jersey.html">Accessoris</a>
+                        <a href="../faqpage.html">FAQ</a>
+                        <a href="../purchasepage.html">Purchase</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <a class="ddown" href="#navmen"><i class="fas fa-bars"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Account</a>
+                        <a href="#">Setting</a>
+                        <a href="#">About</a>
+                        <a href="#">Sign Out</a>
+                    </div>
+                </div>
+                
+            </ul>
+
+        </nav>
+    </header>
+    <div class="spacer"></div>
+
+    <main>
+        <div class="sideline">
+            <p class="tagline">This is Why We Play</p>
+            <img src="./purchase-img/shared/nike-logo.png" alt="">
+        </div>
+        <div class="heading-container">
+            <p class="headline">I LOVE THIS GAME</p>
+
+            <div class="text-wrapper border">
+                <h1>FOCO Team Backpack</h1>
+
+                <div class="price-review-wrapper">
+                    <div class="price">
+                        Rp 175k
+                    </div>
+
+                    <div class="review">
+                        <div class="star"><i class="fas fa-star"></i><i class="fas fa-star">
+                        </i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+                        </div>
+                        <a href="#">3 REVIEWS</a>
+                    </div>
+
+                    <div class="desc">
+                        <p>Lightweight design with an open top so you can throw in your workout gear and go. The extra zipped pocket helps keeps your things organised. Shoulder straps double as a drawcord to secure your stuff.</p>
+                        <a id="ds" onclick="showDetails()">Show Details</a>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="carousel-wrapper border">
+                <div class="carousel-item fade">
+                    <img src="./purchase-img/bag/bag-1.png" alt="">
+                </div>
+                <div class="carousel-item fade hide">
+                    <img src="./purchase-img/bag/bag-2.png" alt="">
+                </div>
+                <div class="carousel-item fade hide">
+                    <img src="./purchase-img/bag/bag-3.png" alt="">
+                </div>
+                <div class="navigation-circle">
+                    <div id="c1" class="circle active"></div>
+                    <div id="c2" class="circle"></div>
+                    <div id="c3" class="circle"></div>
+                </div>
+                <div class="navigation-btn-wrapper">
+                    <a class="prev" onclick="prevSlide()"><i class="fas fa-arrow-circle-left"></i></a>
+                    <a class="next" onclick="nextSlide()"><i class="fas fa-arrow-circle-right"></i></a>
+                </div>
+            </div>
+
+            <div class="sizing-wrapper border">
+                <div class="size-option-wrapper" style="justify-content: start">
+                    <p>SELECT SIZE</p>
+                    <div class="size-option" style="margin-left: 2vw">
+                        <button id="euro" class="selected-type" onclick="updateSizeLabels(this.id)">INTERNATIONAL</button>
+                    </div>
+                </div>
+                <div class="size-wrapper">
+                    <div class="size">
+                        <button id="0" onclick="selectedSize(this.id)" class="selected-size" style="width: 55%; border-radius: 15vw">One size fits all</button>
+                    </div>
+                    <a href="size-chart.html" target="_blank" rel="noreferrer noopener">SIZE CHART</a>
+                </div>
+                <div class="buy-wrapper">
+                    <div class="quantity">
+                        <button id="increment-btn" onclick="increment()">+</button>
+                        <p id="current-quantity">1</p>
+                        <button id="decrement-btn" onclick="decrement()">-</button>
+                    </div>
+                    <a href="#buy-form" class="buy-now">BUY NOW</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="popup" class="overlay hide">
+            <div class="popup">
+                <div class="back-btn">
+                    <a onclick="closeDetails()">x</a>
+                </div>
+                <h3>Impact Cushioning and Responsiveness</h3>
+                <p>
+                    A Max Air unit under the heel provides impact cushioning for big, strong players like LeBron.It's
+                    paired
+                    with full-length Nike React foam for smooth transitions and responsiveness.
+                </p>
+                <br>
+
+                <h3>Lightweight, Durable Materials</h3>
+                <p>
+                    Leather in the upper is lightweight and durable.Overlays provide structure and support.
+                </p>
+                <br>
+
+                <h3>Heel Lock-In</h3>
+                <p>
+                    The outer moulded heel clip provides lightweight support to help lock in the back of your foot.
+                </p>
+                <br>
+
+                <h3>Product Details</h3>
+                <p>
+                    Light, padded tongue
+                    Padded collar
+                    Rubber sole with diamond cut-outs
+                    Colour Shown: Khaki/Dark Mocha/Metallic Gold/Viotech
+                    Style: CW3153-200
+                    Country/Region of Origin: Vietnam
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <section id="buy-form">
+        <div class="form-wrapper">
+            <h2 class="section-title">Checkout information</h2>
+            <form id="myForm" name="registerForm" method="POST" action="disc.html">
+                <div class="form-input">
+                    <label for="name">Full name:</label><br>
+                    <input name="name" type="text" id="name"><br>
+                </div>
+                <div class="form-input">
+                    <label for="phone-number">Phone number:</label><br>
+                    <input name="phoneNumber" type="number" id="phone-number">
+                </div>
+                <div class="form-input">
+                    <label for="email">Email:</label><br>
+                    <input name="email" type="email" id="email">
+                </div>
+                Gender:
+                <div class="form-input" id="gender">
+                    <input type="radio" id="male" name="gender" value="male">
+                    <label for="male">Male</label><br>
+                    <input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label><br>
+                    <p></p>
+                </div>
+                <div class="form-input">
+                    <label for="age">Age:</label><br>
+                    <input type="number" id="age" name="age">
+                </div>
+                <div class="form-input">
+                    <label for="district">District:</label><br>
+                    <input name="district" type="text" id="district">
+                </div>
+                <div class="form-input">
+                    <label for="address">Address:</label><br>
+                    <input name="address" type="text" id="address">
+                </div>
+                <div class="form-input">
+                    <label for="postal-code">Postal code:</label><br>
+                    <input name="postalCode" type="number" id="postal-code">
+                </div>
+                <div class="form-input">
+                    <label for="notes">Additional notes:</label><br>
+                    <textarea name="notes" id="notes" cols="30" rows="10"></textarea>
+                </div>
+
+                <div class="form-input">
+                    <input class="submit-btn" type="submit" id="submit">
+                    <p id="error-message"></p>
+                </div>
+
+            </form>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="../js/jqueryhome.js"></script>
+    <script src="purchase.js"></script>
+
+    
+    <footer>
+        <div class="caps">
+            <h6>About Us</h6>
+            <h6>Menu</h6>
+            <h6>Address</h6>
+        </div>
+        <div class="descr">
+            <div class="about">
+                <p>Hoops universe is a shop that sells several basketball shoes and other basketball equipment, from basketballs, jerseys, jackets, and more. We also hold several events such as giveaways, promo discounts, and share some news about basketball.</p>
+            </div>
+            <div class="menu">
+                <ul><a href="../home.html">Home</a></ul>
+                <ul><a href="../Mens-Shoes.html">Shoes</a></ul>
+                <ul><a href="../Mens-Jersey.html">Accessoris</a></ul>
+                <ul><a href="../faqpage.html">FAQ</a></ul>
+                <ul><a href="../purchasepage.html">Purchase</a></ul>
+            </div>
+            <div class="add">
+                <p>Hoops Universe store has several branches, such as PCentral Jakarta City( Jakarta ), Supermal Karawaci( Tangerang, Banten ), West Jakarta City( Jakarta ) and many more. The center for the hoops universe store is located in Grand Indonesia, Jakarta.</p>
+            </div>
+        </div>
+        <br>
+        <hr>
+        
+        <p class="copy">© Hoops Universe All Rights Reserved.</p>
+        <div class="social-icon">
+            <a href="https://www.instagram.com/hoops.indonesia/?hl=en"> <img src="../Assets/ig.png" alt="" class="social">  </a>
+            <a href="https://twitter.com/hoopsindo?lang=en"> <img src="../Assets/twitter.png" alt="" class="social"> </a>
+            <a href="https://www.facebook.com/HOOPSnyaINDONESIA/"> <img src="../Assets/facebook-512.png" alt="" class="social">  </a>
+        </div>
+        
+            
+        
+    </footer>
+</body>
+</html>
